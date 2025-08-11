@@ -1,0 +1,39 @@
+
+#include <stdio.h>
+
+int main() {
+    // Tabuleiro 10x10
+    int tabuleiro[10][10] = {0};
+
+    // Posicionamento do navio vertical (3 partes)
+    int navio_vertical_x = 2;
+    int navio_vertical_y = 4;
+
+    tabuleiro[navio_vertical_x][navio_vertical_y] = 1;
+    tabuleiro[navio_vertical_x + 1][navio_vertical_y] = 1;
+    tabuleiro[navio_vertical_x + 2][navio_vertical_y] = 1;
+
+    // Posicionamento do navio horizontal (4 partes)
+    int navio_horizontal_x = 6;
+    int navio_horizontal_y = 1;
+
+    tabuleiro[navio_horizontal_x][navio_horizontal_y] = 2;
+    tabuleiro[navio_horizontal_x][navio_horizontal_y + 1] = 2;
+    tabuleiro[navio_horizontal_x][navio_horizontal_y + 2] = 2;
+    tabuleiro[navio_horizontal_x][navio_horizontal_y + 3] = 2;
+
+    // Exibir coordenadas do navio vertical
+    printf("Navio Vertical (3 partes):\n");
+    printf("Parte 1: (%d, %d)\n", navio_vertical_x, navio_vertical_y);
+    printf("Parte 2: (%d, %d)\n", navio_vertical_x + 1, navio_vertical_y);
+    printf("Parte 3: (%d, %d)\n", navio_vertical_x + 2, navio_vertical_y);
+
+    // Exibir coordenadas do navio horizontal
+    printf("\nNavio Horizontal (4 partes):\n");
+    printf("Parte 1: (%d, %d)\n", navio_horizontal_x, navio_horizontal_y);
+    printf("Parte 2: (%d, %d)\n", navio_horizontal_x, navio_horizontal_y + 1);
+    printf("Parte 3: (%d, %d)\n", navio_horizontal_x, navio_horizontal_y + 2);
+    printf("Parte 4: (%d, %d)\n", navio_horizontal_x, navio_horizontal_y + 3);
+
+    return 0;
+}
